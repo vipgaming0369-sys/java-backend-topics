@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Backend Development Roadmap</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">☕</span>
+                <span class="brand-text">Java Backend Roadmap</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#core-java" class="nav-link">Core Java</a></li>
+                <li><a href="#web-api" class="nav-link">Web & API</a></li>
+                <li><a href="#spring" class="nav-link">Spring Boot</a></li>
+                <li><a href="#database" class="nav-link">Database</a></li>
+                <li><a href="#security" class="nav-link">Security</a></li>
+                <li><a href="#tools" class="nav-link">Tools</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Master Java Backend Development</h1>
+            <p class="hero-subtitle">Your complete roadmap from Core Java to Production-Ready Applications</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('core-java')">Start Learning</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('projects')">View Projects</button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <h3>9</h3>
+                    <p>Main Topics</p>
+                </div>
+                <div class="stat">
+                    <h3>50+</h3>
+                    <p>Concepts</p>
+                </div>
+                <div class="stat">
+                    <h3>5</h3>
+                    <p>Projects</p>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="arrow-down"></div>
+        </div>
+    </section>
+
+    <!-- Core Java Section -->
+    <section id="core-java" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">🟢 Module 1</span>
+                <h2 class="section-title">Core Java (Practical – Backend Oriented)</h2>
+                <p class="section-description">Master the fundamentals of Java programming with a backend focus</p>
+            </div>
+
+            <div class="topics-grid">
+                <div class="topic-card" data-topic="variables">
+                    <div class="topic-number">1</div>
+                    <h3>Variables & Data Types</h3>
+                    <p class="topic-desc">Store data in memory for user input, database values, and API responses</p>
+                    <div class="code-preview">
+                        <code>int userId = 101;<br>String username = "Yogesh";<br>boolean isActive = true;</code>
+                    </div>
+                    <button class="btn-learn" onclick="openModal('variables')">Learn More</button>
+                </div>
+
+                <div class="topic-card" data-topic="control">
+                    <div class="topic-number">2</div>
+                    <h3>Control Statements</h3>
+                    <p class="topic-desc">Decision-making & loops for data validation and processing</p>
+                    <div class="code-preview">
+                        <code>if (userAge >= 18) {<br>    System.out.println("Allowed");<br>}</code>
+                    </div>
+                    <button class="btn-learn" onclick="openModal('control')">Learn More</button>
+                </div>
+
+                <div class="topic-card" data-topic="methods">
+                    <div class="topic-number">3</div>
+                    <h3>Methods</h3>
+                    <p class="topic-desc">Reusable blocks of logic - backbone of backend apps</p>
+                    <div class="code-preview">
+                        <code>public String getUserName(int id) {<br>    return "Yogesh";<br>}</code>
+                    </div>
+                    <button class="btn-learn" onclick="openModal('methods')">Learn More</button>
+                </div>
+
+                <div class="topic-card" data-topic="arrays">
+                    <div class="topic-number">4</div>
+                    <h3>Arrays</h3>
+                    <p class="topic-desc">Fixed-size data collections used internally</p>
+                    <div class="code-preview">
+                        <code>int[] ids = {1, 2, 3};</code>
+                    </div>
+                    <button class="btn-learn" onclick="openModal('arrays')">Learn More</button>
+                </div>
+
+                <div class="topic-card" data-topic="strings">
+                    <div class="topic-number">5</div>
+                    <h3>Strings</h3>
+                    <p class="topic-desc">Handle API requests, JSON data, and URLs</p>
+                    <div class="code-preview">
+                        <code>String email = "test@gmail.com";<br>email.toLowerCase();</code>
+                    </div>
+                    <button class="btn-learn" onclick="openModal('strings')">Learn More</button>
+                </div>
+
+                <div class="topic-card highlight" data-topic="oop">
+                    <div class="topic-number">6</div>
+                    <div class="fire-badge">🔥 VERY IMPORTANT</div>
+                    <h3>OOP Concepts</h3>
+                    <p class="topic-desc">Classes, Encapsulation, Inheritance, Polymorphism</p>
+                    <div class="code-preview">
+                        <code>class User {<br>    private String password;<br>}</code>
+                    </div>
+                    <button class="btn-learn" onclick="openModal('oop')">Learn More</button>
+                </div>
+
+                <div class="topic-card" data-topic="interfaces">
+                    <div class="topic-number">7</div>
+                    <h3>Interfaces</h3>
+                    <p class="topic-desc">Define rules - Spring uses interfaces heavily</p>
+                    <div class="code-preview">
+                        <code>interface UserService {<br>    void saveUser();<br>}</code>
+                    </div>
+                    <button class="btn-learn" onclick="openModal('interfaces')">Learn More</button>
+                </div>
+
+                <div class="topic-card" data-topic="abstract">
+                    <div class="topic-number">8</div>
+                    <h3>Abstract Classes</h3>
+                    <p class="topic-desc">Partial implementation for flexible design</p>
+                    <div class="code-preview">
+                        <code>abstract class Payment {<br>    abstract void pay();<br>}</code>
+                    </div>
+                    <button class="btn-learn" onclick="openModal('abstract')">Learn More</button>
+                </div>
+
+                <div class="topic-card" data-topic="collections">
+                    <div class="topic-number">9</div>
+                    <h3>Collections Framework</h3>
+                    <p class="topic-desc">Work with lists of data efficiently</p>
+                    <div class="code-preview">
+                        <code>List&lt;User&gt; users = new ArrayList&lt;&gt;();<br>Map&lt;Integer, User&gt; map;</code>
+                    </div>
+                    <button class="btn-learn" onclick="openModal('collections')">Learn More</button>
+                </div>
+
+                <div class="topic-card" data-topic="exceptions">
+                    <div class="topic-number">10</div>
+                    <h3>Exception Handling</h3>
+                    <p class="topic-desc">Prevent backend crashes</p>
+                    <div class="code-preview">
+                        <code>try {<br>    int x = 10 / 0;<br>} catch (Exception e) { }</code>
+                    </div>
+                    <button class="btn-learn" onclick="openModal('exceptions')">Learn More</button>
+                </div>
+
+                <div class="topic-card highlight" data-topic="java8">
+                    <div class="topic-number">11</div>
+                    <div class="fire-badge">🔥 MUST KNOW</div>
+                    <h3>Java 8 Features</h3>
+                    <p class="topic-desc">Lambda expressions and Streams API</p>
+                    <div class="code-preview">
+                        <code>users.stream()<br>     .filter(u -> u.isActive())<br>     .collect(Collectors.toList());</code>
+                    </div>
+                    <button class="btn-learn" onclick="openModal('java8')">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Web & API Section -->
+    <section id="web-api" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">🟢 Module 2</span>
+                <h2 class="section-title">Web & API Basics</h2>
+                <p class="section-description">Understand client-server communication and REST APIs</p>
+            </div>
+
+            <div class="concepts-grid">
+                <div class="concept-card">
+                    <div class="concept-icon">🌐</div>
+                    <h3>HTTP Protocol</h3>
+                    <p>Communication rules between client & server</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="concept-icon">📡</div>
+                    <h3>HTTP Methods</h3>
+                    <div class="http-methods">
+                        <span class="method get">GET</span> Read data<br>
+                        <span class="method post">POST</span> Create<br>
+                        <span class="method put">PUT</span> Update<br>
+                        <span class="method delete">DELETE</span> Remove
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="concept-icon">🔌</div>
+                    <h3>REST APIs</h3>
+                    <p>Standard way to build backend services</p>
+                    <div class="api-examples">
+                        <code>GET /users</code>
+                        <code>POST /users</code>
+                        <code>GET /users/1</code>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="concept-icon">📦</div>
+                    <h3>JSON Handling</h3>
+                    <p>Frontend ↔ Backend communication</p>
+                    <div class="code-preview">
+                        <code>{ "id": 1, "name": "Yogesh" }</code>
+                    </div>
+                </div>
+
+                <div class="concept-card full-width">
+                    <div class="concept-icon">🏗️</div>
+                    <h3>Client–Server Architecture</h3>
+                    <div class="architecture-diagram">
+                        <div class="arch-box">Browser / App</div>
+                        <div class="arch-arrow">↓ HTTP</div>
+                        <div class="arch-box">Spring Boot Backend</div>
+                        <div class="arch-arrow">↓</div>
+                        <div class="arch-box">Database</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spring Boot Section -->
+    <section id="spring" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">🟢 Module 3</span>
+                <h2 class="section-title">Spring & Spring Boot</h2>
+                <div class="fire-badge large">🔥 CORE BACKEND</div>
+                <p class="section-description">Build enterprise-grade backend applications</p>
+            </div>
+
+            <div class="spring-features">
+                <div class="feature-card">
+                    <h3>🌱 Spring Core</h3>
+                    <p>Framework for enterprise apps with powerful features</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>💉 Dependency Injection</h3>
+                    <p>Loose coupling for maintainable code</p>
+                    <div class="code-preview">
+                        <code>@Autowired<br>UserService userService;</code>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🚀 Spring Boot Setup</h3>
+                    <p>Auto-configuration, no XML needed</p>
+                </div>
+
+                <div class="feature-card highlight">
+                    <h3>🎮 REST Controllers</h3>
+                    <div class="code-preview large">
+                        <code>@RestController<br>@RequestMapping("/users")<br>public class UserController {<br><br>    @GetMapping<br>    public String getUsers() {<br>        return "All Users";<br>    }<br>}</code>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <h3>📍 Request Mapping</h3>
+                    <p>Handle different HTTP methods</p>
+                    <div class="code-preview">
+                        <code>@GetMapping("/users")<br>@PostMapping("/users")</code>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🔧 Request Handling</h3>
+                    <div class="code-preview">
+                        <code>@RequestBody User user<br>@PathVariable int id<br>@RequestParam String name</code>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <h3>⚠️ Exception Handling</h3>
+                    <div class="code-preview">
+                        <code>@ControllerAdvice<br>public class GlobalExceptionHandler { }</code>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <h3>✅ Validation</h3>
+                    <div class="code-preview">
+                        <code>@NotNull<br>@NotBlank<br>@Email</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Database Section -->
+    <section id="database" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">🟢 Module 4</span>
+                <h2 class="section-title">Database & ORM</h2>
+                <p class="section-description">Master data persistence and management</p>
+            </div>
+
+            <div class="database-grid">
+                <div class="db-card">
+                    <h3>📊 SQL (CRUD)</h3>
+                    <div class="code-preview">
+                        <code>INSERT INTO users VALUES (1, 'Yogesh');<br>SELECT * FROM users;</code>
+                    </div>
+                </div>
+
+                <div class="db-card">
+                    <h3>🐬 MySQL / PostgreSQL</h3>
+                    <p>Relational databases for structured data</p>
+                </div>
+
+                <div class="db-card">
+                    <h3>🍃 MongoDB</h3>
+                    <p>NoSQL – document-based database</p>
+                </div>
+
+                <div class="db-card highlight">
+                    <h3>🗂️ JPA & Hibernate</h3>
+                    <p>Write Java, not SQL!</p>
+                    <div class="code-preview">
+                        <code>@Entity<br>class User {<br>    @Id<br>    private int id;<br>}</code>
+                    </div>
+                </div>
+
+                <div class="db-card">
+                    <h3>🔗 Relationships</h3>
+                    <div class="code-preview">
+                        <code>@OneToMany<br>@ManyToOne<br>@ManyToMany</code>
+                    </div>
+                </div>
+
+                <div class="db-card">
+                    <h3>📄 Pagination & Sorting</h3>
+                    <div class="code-preview">
+                        <code>Pageable pageable = <br>PageRequest.of(0, 10);</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section id="security" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">🟢 Module 5</span>
+                <h2 class="section-title">Security</h2>
+                <div class="fire-badge large">🔥 VERY IMPORTANT</div>
+                <p class="section-description">Protect your backend applications</p>
+            </div>
+
+            <div class="security-grid">
+                <div class="security-card">
+                    <div class="security-icon">🔐</div>
+                    <h3>Authentication</h3>
+                    <p>Who you are?</p>
+                </div>
+
+                <div class="security-card">
+                    <div class="security-icon">🛡️</div>
+                    <h3>Authorization</h3>
+                    <p>What can you do?</p>
+                </div>
+
+                <div class="security-card">
+                    <div class="security-icon">🔒</div>
+                    <h3>Spring Security</h3>
+                    <p>Protect APIs with Spring Security framework</p>
+                </div>
+
+                <div class="security-card">
+                    <div class="security-icon">🔑</div>
+                    <h3>Password Encryption</h3>
+                    <div class="code-preview">
+                        <code>BCryptPasswordEncoder encoder = <br>new BCryptPasswordEncoder();</code>
+                    </div>
+                </div>
+
+                <div class="security-card highlight">
+                    <div class="security-icon">🎫</div>
+                    <h3>JWT Tokens</h3>
+                    <p>Login → Token → Access APIs</p>
+                </div>
+
+                <div class="security-card">
+                    <div class="security-icon">👑</div>
+                    <h3>Role-Based Access</h3>
+                    <div class="code-preview">
+                        <code>@PreAuthorize("hasRole('ADMIN')")</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">🟢 Module 6</span>
+                <h2 class="section-title">Tools & Testing</h2>
+                <p class="section-description">Essential tools for backend development</p>
+            </div>
+
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">📮</div>
+                    <h3>Postman</h3>
+                    <p>Test APIs efficiently</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">📚</div>
+                    <h3>Swagger</h3>
+                    <p>Auto API documentation</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">📦</div>
+                    <h3>Maven / Gradle</h3>
+                    <p>Dependency management</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">📝</div>
+                    <h3>Logging</h3>
+                    <div class="code-preview">
+                        <code>log.info("User created");</code>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">🧪</div>
+                    <h3>JUnit</h3>
+                    <p>Test backend logic</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">🔄</div>
+                    <h3>Git & GitHub</h3>
+                    <p>Version control</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">🐳</div>
+                    <h3>Docker</h3>
+                    <p>Package app + dependencies</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">☁️</div>
+                    <h3>Cloud (AWS / Render)</h3>
+                    <p>Deploy backend online</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">🟢 Module 9</span>
+                <h2 class="section-title">Real Projects</h2>
+                <div class="fire-badge large">🔥 APPLY EVERYTHING</div>
+                <p class="section-description">Build portfolio-worthy applications</p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-number">1</div>
+                    <h3>User Auth System</h3>
+                    <p>Registration, Login, JWT Authentication</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Spring Security</span>
+                        <span class="tech-tag">JWT</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-number">2</div>
+                    <h3>CRUD Application</h3>
+                    <p>Complete Create, Read, Update, Delete operations</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">JPA</span>
+                        <span class="tech-tag">REST API</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-number">3</div>
+                    <h3>REST API Project</h3>
+                    <p>Full-featured RESTful API with documentation</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">Swagger</span>
+                        <span class="tech-tag">Validation</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-number">4</div>
+                    <h3>Portfolio Backend</h3>
+                    <p>Backend for your portfolio website</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Cloud Deploy</span>
+                    </div>
+                </div>
+
+                <div class="project-card highlight">
+                    <div class="project-number">5</div>
+                    <h3>E-commerce Backend</h3>
+                    <p>Complete shopping system with cart, orders, payments</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Microservices</span>
+                        <span class="tech-tag">Security</span>
+                        <span class="tech-tag">Payment Gateway</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Path Section -->
+    <section id="learning-path" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🎯 Your Learning Path</h2>
+                <p class="section-description">Follow this order for optimal results</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">1</div>
+                    <div class="timeline-content">
+                        <h3>Core Java</h3>
+                        <p>Build strong foundations</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">2</div>
+                    <div class="timeline-content">
+                        <h3>Web Basics</h3>
+                        <p>Understand HTTP & REST</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">3</div>
+                    <div class="timeline-content">
+                        <h3>Spring Boot</h3>
+                        <p>Master the framework</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">4</div>
+                    <div class="timeline-content">
+                        <h3>Database</h3>
+                        <p>Learn data persistence</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">5</div>
+                    <div class="timeline-content">
+                        <h3>Security</h3>
+                        <p>Protect your apps</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">6</div>
+                    <div class="timeline-content">
+                        <h3>Projects</h3>
+                        <p>Apply everything!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>☕ Java Backend Roadmap</h3>
+                    <p>Your complete guide to becoming a backend developer</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#core-java">Core Java</a></li>
+                        <li><a href="#spring">Spring Boot</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Java Backend Roadmap. Built with ❤️ for developers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" class="scroll-top" onclick="scrollToTop()">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
